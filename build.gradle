@@ -20,6 +20,7 @@ targetCompatibility = 1.8
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testCompile ('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'junit', module: 'junit'
