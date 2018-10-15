@@ -20,11 +20,14 @@ targetCompatibility = 1.8
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.boot:spring-boot-starter-actuator'
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    runtime 'org.springframework.boot:spring-boot-starter-actuator'
+    runtime 'io.micrometer:micrometer-registry-prometheus'
+
     testCompile ('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'junit', module: 'junit'
     }
+
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
 
