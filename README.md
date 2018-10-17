@@ -1,9 +1,18 @@
-# Spring metrics demo
+# Grafana, Prometheus metrics demo
 
-## Start Prometheus
+1. Make sure your application is running locally (http://localhost:8080/actuator/health)
 
-Running for the root of the project:
+2. Start up Prometheus and Grafana:
 ```bash
-PROMETHEUS_CONFIG_PATH=$(pwd)/prometheus.yml
-docker run -d --name=prometheus -p 9090:9090 -v $PROMETHEUS_CONFIG_PATH:/etc/prometheus/prometheus.yml prom/prometheus --config.file=/etc/prometheus/prometheus.yml
+docker/start-prometheus-and-grafana.sh
+```
+
+3. Access Prometheus:
+```bash
+http://localhost:9090
+```
+
+4. Access Grafana dashboard:
+```bash
+http://localhost:3000/d/20clfkxmz/tsys-adapter-dashboard?refresh=5s&orgId=1
 ```
